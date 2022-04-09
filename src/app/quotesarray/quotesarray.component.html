@@ -1,1 +1,9 @@
-<h3 class="text-center">QUOTES</h3>
+<ul>
+  <li *ngFor="let quote of quotes">
+    {{ quote.quotename }} <br/>
+    <span class="span1">Written by: {{ quote.author }}</span> <br/>
+    <span class="span1">Posted by: {{ quote.person }}</span><br/>
+    <span class="span1">Upvotes: {{ quote.upvote }}</span><br>
+    <span class="span1">Downvotes: {{ quote.downvote }}</span>
+  </li>
+</ul>
