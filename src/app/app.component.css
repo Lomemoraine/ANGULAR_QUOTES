@@ -3,6 +3,11 @@
     font-weight: bold;
     text-align: center;
     background-color: grey;
-    margin-top: 20px;
+    margin-top:20px;
     
+}
+.div2 {
+    background-color:darkgray;
+    margin-top: 20px;
+    width: 80vw;
 }
