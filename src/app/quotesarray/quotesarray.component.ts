@@ -16,7 +16,7 @@ export class QuotesarrayComponent implements OnInit {
       'Lorraine',
       12,
       0,
-      new Date(2022, 3, 14)
+      new Date(2022, 3, 9)
     ),
     new Quote(
       2,
@@ -25,7 +25,7 @@ export class QuotesarrayComponent implements OnInit {
       'Gift',
       0,
       0,
-      new Date(2022, 4, 10)
+      new Date(2022, 1, 4)
     ),
     new Quote(
       3,
@@ -34,7 +34,7 @@ export class QuotesarrayComponent implements OnInit {
       'Chepkemoi',
       0,
       0,
-      new Date(2022, 3, 30)
+      new Date(2022, 0, 30)
     ),
   ];
   highUpvotes:Quote[]=[
@@ -45,7 +45,7 @@ export class QuotesarrayComponent implements OnInit {
       'Lorraine',
       12,
       0,
-      new Date(2022, 3, 14)
+      new Date(2021, 3, 9)
     )
   ]
   addNewQuote(quote) {
