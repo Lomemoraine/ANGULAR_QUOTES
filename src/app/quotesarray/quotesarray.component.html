@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
 <div class="container head1">
   <h1>My Quotes</h1>
 </div>
@@ -5,20 +6,24 @@
   <div class="row">
     <div class="col -sm -12 col-md-6">
       <h3 class="text-center">QUOTES</h3>
-      <ul *ngFor="let quote of quotes">
-        <li>
-          {{ quote.quotename }} <br/>
-          <span class="span1">Author: {{ quote.author }}</span> <br/>
-          <span class="span1">Posted by: {{ quote.person }}</span><br/>
-          <span class="span1">Upvotes: {{ quote.upvote }}</span><br>
-          <span class="span1">Downvotes: {{ quote.downvote }}</span>
-        </li>
-      </ul>
+      <div class="mt-5" *ngFor="let quote of quotes; let i = index" >
+        <div>
+          <h4 (click)="toggleDetails(i)"><i class="fas  fa-quote-left"></i> {{ quote.quotename }} <i class="fas  fa-quote-right"></i></h4>
+          <!-- <button (click)="toggleDetails(i)" class="btn btn-success">
+            Toggle Details
+          </button> -->
+        </div>
+        <div *ngIf="quote.showDetails">
+          <app-quotedetails [quote] = 'quote' (isDeleted)='deleteQuote($event,i)'></app-quotedetails>
+        </div>
+      </div>
     </div>
+        
     <div class="col-md-1"></div>
     <div class="col -sm -12 col-md-5">
       <h3 class="text-center">ADD QUOTE</h3>
       <app-quoteform >(addquote)="addNewQuote($event)"></app-quoteform>
     </div>
-  </div>
+  
+</div>
 </div>

@@ -8,6 +8,11 @@ import { Quote } from '../quote';
 })
 export class QuotedetailsComponent implements OnInit {
   @Input() quote:Quote;
+  @Output() isDeleted=new EventEmitter<boolean>();
+
+  quoteDelete(remove:boolean){
+    this.isDeleted.emit(remove);
+  }
 
   constructor() { }
 
