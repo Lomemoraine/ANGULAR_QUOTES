@@ -13,7 +13,7 @@ export class QuoteformComponent implements OnInit {
 
   submitQuote(quoteform: NgForm) {
     this.addQuote.emit(this.newQuote);
-    quoteform.resetForm();
+    // quoteform.resetForm();
   }
 
   constructor() {}

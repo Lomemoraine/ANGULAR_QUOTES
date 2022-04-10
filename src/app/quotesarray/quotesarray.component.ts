@@ -14,7 +14,7 @@ export class QuotesarrayComponent implements OnInit {
       'Talk is cheap. Show me the code.',
       'Linus Torvalds',
       'Lorraine',
-      0,
+      12,
       0,
       new Date(2022, 3, 14)
     ),
@@ -39,13 +39,13 @@ export class QuotesarrayComponent implements OnInit {
   ];
   highUpvotes:Quote[]=[
     new Quote( 
-      3,
-      'I am not a great programmer; Iam just a good programmer with great habits.',
-      'Kent Beck',
-      'Chepkemoi',
       1,
+      'Talk is cheap. Show me the code.',
+      'Linus Torvalds',
+      'Lorraine',
+      12,
       0,
-      new Date(2022, 3, 30)
+      new Date(2022, 3, 14)
     )
   ]
   addNewQuote(quote) {
