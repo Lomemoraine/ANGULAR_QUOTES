@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Quote } from '../quote';
+import { HighlightDirective } from '../highlight.directive';
 
 @Component({
   selector: 'app-quotesarray',
@@ -31,11 +32,22 @@ export class QuotesarrayComponent implements OnInit {
       'I am not a great programmer; Iam just a good programmer with great habits.',
       'Kent Beck',
       'Chepkemoi',
-      0,
+      1,
       0,
       new Date(2022, 3, 30)
     ),
   ];
+  highUpvotes:Quote[]=[
+    new Quote( 
+      3,
+      'I am not a great programmer; Iam just a good programmer with great habits.',
+      'Kent Beck',
+      'Chepkemoi',
+      1,
+      0,
+      new Date(2022, 3, 30)
+    )
+  ]
   addNewQuote(quote) {
     let quoteLength = this.quotes.length;
     quote.id = quoteLength + 1;
@@ -63,7 +75,21 @@ export class QuotesarrayComponent implements OnInit {
     var down = this.quotes[index].downvote + 1;
     this.quotes[index].downvote = down;
   }
+  mostUpvotes() {
+    this.highUpvotes.splice(0,this.highUpvotes.length);
+    var largest = this.quotes[0].upvote;
+    var number = null;
+    for (var i = 0; i < this.quotes.length; i++) {
+      number = this.quotes[i].upvote;
 
+      largest = Math.max(largest, number);
+    }
+    for (var i = 0; i < this.quotes.length; i++) {
+      if (this.quotes[i].upvote === largest) {
+        this.highUpvotes.push(this.quotes[i]);
+      }
+    }
+  }
 
   constructor() {}
 
