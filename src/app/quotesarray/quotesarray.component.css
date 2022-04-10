@@ -7,7 +7,13 @@
     
 }
 .div2 {
-    background-color:rgba(169, 169, 169, 0.8);
+    background-color:rgba(169, 169, 169, 0.6);
     margin-top: 20px;
-    width: 100vw;
+    width: 90vw;
+    border-radius: 2%;
+}
+ .div3{
+    margin-top: 20px;
+    width: 50vw;
+    border-radius: 2%;
 }

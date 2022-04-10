@@ -1,7 +1,7 @@
 <form (ngSubmit)="submitQuote(quoteform)" #quoteform="ngForm">
-    <div class="form-group">
   
-        <label for="description">Quote</label>
+    <div class="form-group">
+     <label for="description">Quote</label>
         <textarea class="form-control" id="quote" rows="4" [(ngModel)]="newQuote.quotename" name="quote" #quotename="ngModel" placeholder="Please enter a quote" required></textarea>
         <div [hidden]="quotename.valid || quotename.pristine" class="alert alert-danger">
           <p>Please enter a quote</p>
@@ -24,5 +24,8 @@
           <p>Please enter author's name</p>
         </div>
     </div>
-    <button type="submit" class="btn btn-info">Add</button>
+ 
+    <div class="modal-footer">
+    <button type="submit" class="btn btn-info rounded-pill" [disabled]="!quoteform.valid">Add</button>
+    </div>
     </form>

@@ -64,6 +64,7 @@ export class QuotesarrayComponent implements OnInit {
       );
       if (toDelete) {
         this.quotes.splice(index, 1);
+        this.highUpvotes.splice(index, 1);
       }
     }
   }

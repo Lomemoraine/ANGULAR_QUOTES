@@ -2,7 +2,7 @@
 <div class="container head1">
   <h1>My Quotes</h1>
 </div>
-<div class="container div2">
+<div class="container-fluid div2">
   <div class="row">
     <div class="col -sm -12 col-md-6">
       <h3 class="text-center">QUOTES</h3>
@@ -14,7 +14,7 @@
           </button> -->
         </div>
         <div *ngIf="quote.showDetails">
-         <p class = "text-center"><i style=" color:chocolate" class="far fa-thumbs-up" (click)='upvoteFunc(i)' (click)='mostUpvotes()' ></i> <i style=" color:crimson;   text-indent: 5em;" class="far fa-thumbs-down" (click)='downvoteFunc(i)' ></i></p>
+         <p class = "text-center"><i  class="far fa-thumbs-up" (click)='upvoteFunc(i)' (click)='mostUpvotes()' ></i> <i style=" color:crimson;   text-indent: 5em;" class="far fa-thumbs-down" (click)='downvoteFunc(i)' ></i></p>
           <app-quotedetails [quote] = 'quote' (isDeleted)='deleteQuote($event,i)'></app-quotedetails>
         </div>
       </div>
@@ -27,7 +27,7 @@
     </div>
   
 </div>
-<div>
+<div class=" container div3">
   <h2 style="font-family: 'K2D', sans-serif; color: rgb(210, 66, 30); font-weight: bold;" class="text-center">Highly Upvoted Quote</h2>
   <div *ngFor="let highUpvote of highUpvotes ;let i=index" appHighlight>
       <div>
@@ -38,8 +38,8 @@
         <p class="span1">Author: {{ highUpvote.author }} </p>
         <p class="span1">Posted by: {{ highUpvote.person }}</p>
         <p class="span1">Upvotes: {{ highUpvote.upvote }}</p>
-        <hr>
+        <hr/>
       </div>
     </div>
-  </div>
+  </div><br>
 </div>
