@@ -7,7 +7,6 @@ export class DatecountPipe implements PipeTransform {
 
   transform(value: any): number {
     let todaysdate:any=new Date();
-  
     var dateDifference=Math.abs(value-todaysdate);
     var dateSeconds = dateDifference*0.001;
     const seconds = 86400;
