@@ -59,6 +59,10 @@ export class QuotesarrayComponent implements OnInit {
     var up = this.quotes[index].upvote + 1;
     this.quotes[index].upvote = up;
   }
+  downvoteFunc(index) {
+    var down = this.quotes[index].downvote + 1;
+    this.quotes[index].downvote = down;
+  }
 
 
   constructor() {}
