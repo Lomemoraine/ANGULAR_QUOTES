@@ -14,7 +14,7 @@
           </button> -->
         </div>
         <div *ngIf="quote.showDetails">
-         <p class = "text-center"><i style=" color:chocolate" class="far fa-thumbs-up" ></i> <i style=" color:crimson;   text-indent: 5em;" class="far fa-thumbs-down"></i></p>
+         <p class = "text-center"><i style=" color:chocolate" class="far fa-thumbs-up"  ></i> <i style=" color:crimson;   text-indent: 5em;" class="far fa-thumbs-down" ></i></p>
           <app-quotedetails [quote] = 'quote' (isDeleted)='deleteQuote($event,i)'></app-quotedetails>
         </div>
       </div>
@@ -23,7 +23,7 @@
     <div class="col-md-1"></div>
     <div class="col -sm -12 col-md-5">
       <h3 class="text-center">ADD QUOTE</h3>
-      <app-quoteform >(addquote)="addNewQuote($event)"></app-quoteform>
+      <app-quoteform (addQuote)="addNewQuote($event)"></app-quoteform>
     </div>
   
 </div>

@@ -15,7 +15,7 @@ export class QuotesarrayComponent implements OnInit {
   addNewQuote(quote){
     let quoteLength = this.quotes.length;
     quote.id = quoteLength+1;
-    // goal.completeDate = new Date(goal.completeDate)
+    quote.postDate = new Date(quote.postDate)
     this.quotes.push(quote)
   }
   toggleDetails(index){
