@@ -6,7 +6,7 @@
   <div class="row">
     <div class="col -sm -12 col-md-6">
       <h3 class="text-center">QUOTES</h3>
-      <div class="mt-5" *ngFor="let quote of quotes; let i = index" >
+      <div class="mt-5 font-italic" *ngFor="let quote of quotes; let i = index" >
         <div>
           <h4 (click)="toggleDetails(i)"><i class="fas  fa-quote-left"></i> {{ quote.quotename }} <i class="fas  fa-quote-right"></i></h4>
           <!-- <button (click)="toggleDetails(i)" class="btn btn-success">
@@ -14,6 +14,7 @@
           </button> -->
         </div>
         <div *ngIf="quote.showDetails">
+         <p class = "text-center"><i style=" color:chocolate" class="far fa-thumbs-up" ></i> <i style=" color:crimson;   text-indent: 5em;" class="far fa-thumbs-down"></i></p>
           <app-quotedetails [quote] = 'quote' (isDeleted)='deleteQuote($event,i)'></app-quotedetails>
         </div>
       </div>
