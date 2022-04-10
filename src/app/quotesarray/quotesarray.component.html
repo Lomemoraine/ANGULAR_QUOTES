@@ -8,7 +8,7 @@
       <h3 class="text-center">QUOTES</h3>
       <div class="mt-5 font-italic" *ngFor="let quote of quotes; let i = index" >
         <div>
-          <h4 (click)="toggleDetails(i)"><i class="fas  fa-quote-left"></i> {{ quote.quotename }} <i class="fas  fa-quote-right"></i></h4>
+          <h4 (click)="toggleDetails(i)"><i class="fas  fa-quote-left"></i><a href="#" style ="color:black"> {{ quote.quotename }} </a><i class="fas  fa-quote-right"></i></h4>
           <!-- <button (click)="toggleDetails(i)" class="btn btn-success">
             Toggle Details
           </button> -->

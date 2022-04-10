@@ -32,7 +32,7 @@ export class QuotesarrayComponent implements OnInit {
       'I am not a great programmer; Iam just a good programmer with great habits.',
       'Kent Beck',
       'Chepkemoi',
-      1,
+      0,
       0,
       new Date(2022, 3, 30)
     ),
@@ -67,7 +67,7 @@ export class QuotesarrayComponent implements OnInit {
       );
       if (toDelete) {
         this.quotes.splice(index, 1);
-        this.highUpvotes.splice(index, 1);
+        this.highUpvotes.splice(index,1);
       }
     }
   }
