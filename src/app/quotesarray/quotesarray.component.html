@@ -14,7 +14,7 @@
           </button> -->
         </div>
         <div *ngIf="quote.showDetails">
-         <p class = "text-center"><i style=" color:chocolate" class="far fa-thumbs-up"  ></i> <i style=" color:crimson;   text-indent: 5em;" class="far fa-thumbs-down" ></i></p>
+         <p class = "text-center"><i style=" color:chocolate" class="far fa-thumbs-up" (click)='upvoteFunc(i)' ></i> <i style=" color:crimson;   text-indent: 5em;" class="far fa-thumbs-down" (click)='downvoteFunc(i)' ></i></p>
           <app-quotedetails [quote] = 'quote' (isDeleted)='deleteQuote($event,i)'></app-quotedetails>
         </div>
       </div>
