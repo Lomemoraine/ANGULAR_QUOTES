@@ -49,10 +49,13 @@ export class QuotesarrayComponent implements OnInit {
     )
   ]
   addNewQuote(quote) {
-    let quoteLength = this.quotes.length;
-    quote.id = quoteLength + 1;
-    quote.postDate = new Date(quote.postDate);
-    this.quotes.push(quote);
+    // let quoteLength = this.quotes.length;
+    // quote.id = quoteLength + 1;
+    // quote.postDate = new Date(quote.postDate);
+    // this.quotes.push(quote);
+    let quotesLength=this.quotes.length+1;
+    let quoteObj=new Quote(quotesLength,quote.quotename,quote.author,quote.person,0,0,new Date());
+    this.quotes.push(quoteObj);
   }
   toggleDetails(index) {
     this.quotes[index].showDetails = !this.quotes[index].showDetails;
